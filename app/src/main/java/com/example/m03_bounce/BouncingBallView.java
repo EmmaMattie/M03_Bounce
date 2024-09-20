@@ -81,18 +81,7 @@ public class BouncingBallView extends View {
         }
         // Draw the score at the bottom of the screen
         canvas.drawText("Score: " + score, (float) getWidth() / 2, getHeight() - 100, scorePaint);
-//        for (Ball shape : balls) {
-//            // Draw and move squares
-//            if (shape instanceof Square) {
-//                shape.draw(canvas);
-//                shape.moveWithCollisionDetection(box);
-//            }
-//            // Draw and move other balls (including circles)
-//            else {
-//                shape.draw(canvas);
-//                shape.moveWithCollisionDetection(box);
-//            }
-//        }
+
 
         // Delay on UI thread causes big problems!
         // Simulates doing busy work or waits on UI (DB connections, Network I/O, ....)
@@ -126,13 +115,9 @@ public class BouncingBallView extends View {
         float deltaX, deltaY;
         float scalingFactor = 5.0f / (Math.min(box.xMax, box.yMax));
         switch (event.getAction()) {
-//            case MotionEvent.ACTION_MOVE:
+
             case MotionEvent.ACTION_DOWN:
-                // Modify rotational angles according to movement
-//                deltaX = currentX - previousX;
-//                deltaY = currentY - previousY;
-//            case MotionEvent.ACTION_DOWN:
-//                // Save the starting point of the swipe
+
                 previousX = currentX;
                 previousY = currentY;
                 break;
